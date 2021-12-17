@@ -8,6 +8,7 @@
 </head>
 
 <body>
+	<h3> snack 3 </h3>
 	<?php
 
 	// SNACK 3
@@ -54,8 +55,6 @@
 	];
 
 	$postsKeys = array_keys($posts);
-	echo var_dump($posts);
-	echo var_dump($postsKeys);
 
 
 	for ($i = 0; $i < count($posts); $i++) {
@@ -68,7 +67,22 @@
 	}
 	?>
 
-	<h1> ciao </h1>
+	<h3> snack 4 </h3>
+
+	<?php
+		//		Snack 4
+		// Creare un array con 15 numeri casuali, tenendo conto che l'array non dovrà contenere lo stesso numero più di una volta
+		$numbers = [];
+		while (count($numbers) < 15) {
+			$n = rand(1, 15);
+			if (!in_array($n, $numbers)) {
+			$numbers[] = $n;
+			}
+		}
+
+		echo var_dump($numbers);
+	?>
+
 </body>
 
 </html>
