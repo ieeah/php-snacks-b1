@@ -86,74 +86,121 @@
 	<h3>Snack 5</h3>
 	<!-- Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo. -->
 	<?php
-		$p = 'In at ultricies odio. Vivamus interdum urna enim, ac condimentum lorem euismod et. Nunc quis feugiat ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur ut massa at diam tincidunt euismod sed pulvinar leo. Vivamus mi est, dapibus sit amet lorem a, viverra vestibulum quam. Maecenas consequat egestas neque nec rutrum. Proin id magna a eros ultricies ultrices. Sed purus justo, ultrices vel lacus eu, semper maximus ex. Donec facilisis ante nec lacus vestibulum blandit. Duis cursus varius purus eu placerat. Cras ut magna sem. Fusce imperdiet velit ac ultricies tincidunt. Nulla efficitur aliquet velit, in sagittis mauris. Vestibulum iaculis scelerisque tellus et laoreet. Nullam consequat felis sed lorem egestas iaculis. Orci varius natoque.';
+	$p = 'In at ultricies odio. Vivamus interdum urna enim, ac condimentum lorem euismod et. Nunc quis feugiat ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur ut massa at diam tincidunt euismod sed pulvinar leo. Vivamus mi est, dapibus sit amet lorem a, viverra vestibulum quam. Maecenas consequat egestas neque nec rutrum. Proin id magna a eros ultricies ultrices. Sed purus justo, ultrices vel lacus eu, semper maximus ex. Donec facilisis ante nec lacus vestibulum blandit. Duis cursus varius purus eu placerat. Cras ut magna sem. Fusce imperdiet velit ac ultricies tincidunt. Nulla efficitur aliquet velit, in sagittis mauris. Vestibulum iaculis scelerisque tellus et laoreet. Nullam consequat felis sed lorem egestas iaculis. Orci varius natoque.';
 
-		$ps = explode('.', $p);
+	$ps = explode('.', $p);
 
-		for ($i = 0; $i < count($ps); $i++) {
-			echo $ps[$i] . '<br><br>';
-		}
+	for ($i = 0; $i < count($ps); $i++) {
+		echo $ps[$i] . '<br><br>';
+	}
 	?>
 
 	<h3>Snack 7</h3>
 
 	<?php
-		//Snack 7
-		// Creare un array contenente qualche alunno di un'ipotetica classe. Ogni alunno avrà Nome, Cognome e un array contenente i suoi voti scolastici. Stampare Nome, Cognome e la media dei voti di ogni alunno.
-		$class45 = [
-			[
-				"name" => "Francesco",
-				"cognome" => "Capone",
-				"grades" => [
-					0 => 8,
-					1 => 7,
-					2 => 10,
-					3 => 7,
-					4 => 6,
-				],
+	//Snack 7
+	// Creare un array contenente qualche alunno di un'ipotetica classe. Ogni alunno avrà Nome, Cognome e un array contenente i suoi voti scolastici. Stampare Nome, Cognome e la media dei voti di ogni alunno.
+	$class45 = [
+		[
+			"name" => "Francesco",
+			"cognome" => "Capone",
+			"grades" => [
+				0 => 8,
+				1 => 7,
+				2 => 10,
+				3 => 7,
+				4 => 6,
 			],
-			[
-				"name" => "Antonio",
-				"cognome" => "Capone",
-				"grades" => [
-					0 => 6,
-					1 => 7,
-					2 => 6,
-					3 => 6,
-					4 => 5,
-				],
+		],
+		[
+			"name" => "Antonio",
+			"cognome" => "Capone",
+			"grades" => [
+				0 => 6,
+				1 => 7,
+				2 => 6,
+				3 => 6,
+				4 => 5,
 			],
-			[
-				"name" => "Maccio",
-				"cognome" => "Capatonda",
-				"grades" => [
-					0 => 8,
-					1 => 9,
-					2 => 7,
-					3 => 7,
-					4 => 7,
-				],
+		],
+		[
+			"name" => "Maccio",
+			"cognome" => "Capatonda",
+			"grades" => [
+				0 => 8,
+				1 => 9,
+				2 => 7,
+				3 => 7,
+				4 => 7,
 			],
-			[
-				"name" => "Riccardino",
-				"cognome" => "Fuffolo",
-				"grades" => [
-					0 => 6,
-					1 => 7,
-					2 => 10,
-					3 => 5,
-					4 => 7,
-				],
+		],
+		[
+			"name" => "Riccardino",
+			"cognome" => "Fuffolo",
+			"grades" => [
+				0 => 6,
+				1 => 7,
+				2 => 10,
+				3 => 5,
+				4 => 7,
 			],
+		],
+	];
+
+	for ($i = 0; $i < count($class45); $i++) {
+		echo '<b>' . $class45[$i]['name'] . ' ' . $class45[$i]['cognome'] . '</b><br>';
+		$avg = array_sum($class45[$i]['grades']) / count($class45[$i]['grades']);
+		echo '<em> Media voti: ' . $avg . '</em><br>';
+	}
+	?>
+
+
+	<h3>Snack 6</h3>
+
+	<?php
+
+	$db = [
+			'teachers' => [
+				[
+					'name' => 'Michele',
+					'lastname' => 'Papagni'
+				],
+				[
+					'name' => 'Fabio',
+					'lastname' => 'Forghieri'
+				]
+			],
+			'pm' => [
+				[
+					'name' => 'Roberto',
+					'lastname' => 'Marazzini'
+				],
+				[
+					'name' => 'Federico',
+					'lastname' => 'Pellegrini'
+				]
+			]
 		];
 
-		for ($i = 0; $i < count($class45); $i++) {
-			echo '<b>' . $class45[$i]['name'] . ' ' . $class45[$i]['cognome'] . '</b><br>';
-			$avg = array_sum($class45[$i]['grades']) / count($class45[$i]['grades']);
-			echo '<em> Media voti: ' . $avg . '</em><br>';
+
+		for ($i = 0; $i < count($db['teachers']); $i++) {
+			echo '<div class="teachers">' . $db['teachers'][$i]['name'] . ' ' . $db['teachers'][$i]['lastname'] . '</div>';
 		}
+	for ($i = 0; $i < count($db['pm']); $i++) {
+		echo '<div class="pm">' . $db['pm'][$i]['name'] . ' ' . $db['pm'][$i]['lastname'] . '</div>';
+	}
 	?>
 
 </body>
+
+<style>
+	.pm {
+		background-color: green;
+	}
+
+	.teachers {
+		background-color: lightgray;
+	}
+</style>
 
 </html>
