@@ -95,6 +95,65 @@
 		}
 	?>
 
+	<h3>Snack 7</h3>
+
+	<?php
+		//Snack 7
+		// Creare un array contenente qualche alunno di un'ipotetica classe. Ogni alunno avrà Nome, Cognome e un array contenente i suoi voti scolastici. Stampare Nome, Cognome e la media dei voti di ogni alunno.
+		$class45 = [
+			[
+				"name" => "Francesco",
+				"cognome" => "Capone",
+				"grades" => [
+					0 => 8,
+					1 => 7,
+					2 => 10,
+					3 => 7,
+					4 => 6,
+				],
+			],
+			[
+				"name" => "Antonio",
+				"cognome" => "Capone",
+				"grades" => [
+					0 => 6,
+					1 => 7,
+					2 => 6,
+					3 => 6,
+					4 => 5,
+				],
+			],
+			[
+				"name" => "Maccio",
+				"cognome" => "Capatonda",
+				"grades" => [
+					0 => 8,
+					1 => 9,
+					2 => 7,
+					3 => 7,
+					4 => 7,
+				],
+			],
+			[
+				"name" => "Riccardino",
+				"cognome" => "Fuffolo",
+				"grades" => [
+					0 => 6,
+					1 => 7,
+					2 => 10,
+					3 => 5,
+					4 => 7,
+				],
+			],
+		];
+
+		for ($i = 0; $i < count($class45); $i++) {
+			echo '<b>' . $class45[$i]['name'] . ' ' . $class45[$i]['cognome'] . '</b><br>';
+			$avg = array_sum($class45[$i]['grades']) / count($class45[$i]['grades']);
+			echo '<em> Media voti: ' . $avg . '</em><br>';
+		}
+	?>
+
 </body>
 
 </html>
