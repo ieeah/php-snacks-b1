@@ -148,7 +148,7 @@
 	];
 
 	for ($i = 0; $i < count($class45); $i++) {
-		echo '<b>' . $class45[$i]['name'] . ' ' . $class45[$i]['cognome'] . '</b><br>';
+		echo '<h6>' . $class45[$i]['name'] . ' ' . $class45[$i]['cognome'] . '</h6><br>';
 		$avg = array_sum($class45[$i]['grades']) / count($class45[$i]['grades']);
 		echo '<em> Media voti: ' . $avg . '</em><br>';
 	}
@@ -186,9 +186,9 @@
 		for ($i = 0; $i < count($db['teachers']); $i++) {
 			echo '<div class="teachers">' . $db['teachers'][$i]['name'] . ' ' . $db['teachers'][$i]['lastname'] . '</div>';
 		}
-	for ($i = 0; $i < count($db['pm']); $i++) {
-		echo '<div class="pm">' . $db['pm'][$i]['name'] . ' ' . $db['pm'][$i]['lastname'] . '</div>';
-	}
+		for ($i = 0; $i < count($db['pm']); $i++) {
+			echo '<div class="pm">' . $db['pm'][$i]['name'] . ' ' . $db['pm'][$i]['lastname'] . '</div>';
+		}
 	?>
 
 </body>
